@@ -7,6 +7,8 @@ Evidenciar no seu GitHub os passos seguidos na execução da Atividade.
 
 Postar no Google Classroom o link do Github com a pasta da atividade-06.
 
+## Resolução:
+
 ### Etapa 1:
 <img width="705" height="307" alt="{3900FA71-F0E9-4951-B07C-F216553FC772}" src="https://github.com/user-attachments/assets/fcd31316-e177-4876-bf80-84598e45f545" />
 
