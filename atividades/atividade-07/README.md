@@ -1,6 +1,6 @@
 # Atividade 07 — Algoritmo do Banqueiro
 
-**Aluno:** Gabriell Pasqualli
+**Aluno:** Gabriel Leite Pasqualli
 
 **Disciplina:** Sistemas Operacionais
 
