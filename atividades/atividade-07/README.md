@@ -1,7 +1,9 @@
 # Atividade 07 — Algoritmo do Banqueiro
 
 **Aluno:** Gabriell Pasqualli
+
 **Disciplina:** Sistemas Operacionais
+
 **Assunto:** Prevenção de deadlock com o Algoritmo do Banqueiro (Tanenbaum & Bos, cap. 6)
 
 Este diretório reúne a evidência da execução do `main.py`: a explicação de cada teste, a saída gerada e o print de cada execução (com o nome do aluno na barra de título).
