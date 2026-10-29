@@ -1,3 +1,4 @@
+Aluno: Gabriel Leite Pasqualli
 ======================================================================
      SIMULAÇÃO DO ALGORITMO DO BANQUEIRO (TANENBAUM & BOS - CAP 6)    
 ======================================================================
@@ -46,6 +47,7 @@ Passo 5: P4 pode ser atendido!
 
 ✅ SUCESSO: O sistema está em um ESTADO SEGURO!
    Sequência Segura de Execução: P1 -> P3 -> P0 -> P2 -> P4
+Aluno: Gabriel Leite Pasqualli
 
 ######################################################################
 SOLICITAÇÃO DE RECURSOS PELO PROCESSO P1: [1, 0, 2]
@@ -99,6 +101,7 @@ P2         | [3, 0, 2]       | [9, 0, 2]       | [6, 0, 0]
 P3         | [2, 1, 1]       | [2, 2, 2]       | [0, 1, 1]      
 P4         | [0, 0, 2]       | [4, 3, 3]       | [4, 3, 1]      
 ======================================================================
+Aluno: Gabriel Leite Pasqualli
 
 ######################################################################
 SOLICITAÇÃO DE RECURSOS PELO PROCESSO P4: [3, 3, 0]
