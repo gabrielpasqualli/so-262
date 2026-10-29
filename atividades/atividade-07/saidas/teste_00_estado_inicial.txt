@@ -1,3 +1,4 @@
+Aluno: Gabriel Leite Pasqualli
 ======================================================================
      SIMULAÇÃO DO ALGORITMO DO BANQUEIRO (TANENBAUM & BOS - CAP 6)    
 ======================================================================
