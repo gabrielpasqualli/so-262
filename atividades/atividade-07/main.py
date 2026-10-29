@@ -1,3 +1,12 @@
+#!/usr/bin/env python3
+"""
+Simulador do Algoritmo do Banqueiro (Dijkstra)
+Baseado nos conceitos do Capítulo 6 do livro "Sistemas Operacionais Modernos" (Tanenbaum & Bos).
+
+O algoritmo gerencia a alocação de múltiplos tipos de recursos entre processos,
+garantindo que o sistema permaneça sempre em um ESTADO SEGURO e evitando impasses (deadlocks).
+"""
+
 import copy
 
 class BankersAlgorithm:
@@ -29,7 +38,9 @@ class BankersAlgorithm:
             self.available[j] -= allocated_sum
 
     def display_state(self):
+        
         """Exibe o estado atual do sistema de forma estruturada."""
+    
         print("=" * 70)
         print("ESTADO ATUAL DO SISTEMA")
         print("=" * 70)
@@ -43,6 +54,7 @@ class BankersAlgorithm:
             alloc_str = str(self.allocation[i])
             max_str = str(self.max_matrix[i])
             need_str = str(self.need[i])
+        
             print(f"{p_name:<10} | {alloc_str:<15} | {max_str:<15} | {need_str:<15}")
         print("=" * 70)
 
@@ -105,6 +117,7 @@ class BankersAlgorithm:
         :return: bool (Se a requisição foi concedida ou negada)
         """
         p_name = self.process_names[process_index]
+        print("Aluno: Gabriel Leite Pasqualli")
         print("\n" + "#" * 70)
         print(f"SOLICITAÇÃO DE RECURSOS PELO PROCESSO {p_name}: {request_vector}")
         print("#" * 70)
@@ -119,6 +132,7 @@ class BankersAlgorithm:
         # Passo 2: Verificar se Requisição <= Disponível (Available)
         for j in range(self.num_resources):
             if request_vector[j] > self.available[j]:
+            
                 print(f"⏳ PROCESSO BLOQUEADO: Recursos insuficientes disponíveis no momento.")
                 print(f"   Solicitado: {request_vector[j]} > Disponível {self.available[j]} para o recurso R{j}")
                 print(f"   {p_name} deve aguardar a liberação de recursos por outros processos.")
@@ -151,6 +165,7 @@ class BankersAlgorithm:
 
 
 def run_demo():
+    print("Aluno: Gabriel Leite Pasqualli")
     print("======================================================================")
     print("     SIMULAÇÃO DO ALGORITMO DO BANQUEIRO (TANENBAUM & BOS - CAP 6)    ")
     print("======================================================================")
