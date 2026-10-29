@@ -10,21 +10,15 @@ Este diretório reúne a evidência da execução do `main.py`: a explicação d
 
 ```
 atividade-07/
-├── main.py                  # implementação do Algoritmo do Banqueiro (sem alterações)
-├── gerar_prints.py          # executa o main.py, separa a saída por teste e gera os prints
-├── README.md                # este arquivo
-├── saidas/                  # saída textual da execução
-│   ├── saida_completa.txt
-│   ├── teste_00_estado_inicial.txt
-│   ├── teste_01_p1_requisicao_segura.txt
-│   └── teste_02_p4_requisicao_bloqueada.txt
-└── prints/                  # um print por teste
-    ├── teste_00_estado_inicial.png
-    ├── teste_01_p1_requisicao_segura.png
-    └── teste_02_p4_requisicao_bloqueada.png
+├── main.py                         
+├── README.md                
+└── saidas/                  
+    ├── saida_completa.txt
+    ├── teste_00_estado_inicial.txt
+    ├── teste_01_p1_requisicao_segura.txt
+    └── teste_02_p4_requisicao_bloqueada.txt
 ```
 
-Para reproduzir: `python3 main.py` (ou `python3 gerar_prints.py` para regenerar saídas e prints).
 
 ## Cenário simulado
 
@@ -61,7 +55,9 @@ R0 = 10 − (0+2+3+2+0) = 3, R1 = 5 − (1+0+0+1+0) = 3, R2 = 7 − (0+0+2+1+2) 
 
 **Resultado:** ✅ estado **SEGURO**. Sequência segura: **P1 → P3 → P0 → P2 → P4**. Ao final, `Work = [10, 5, 7]`, igual a `E`, o que confirma que todos os recursos foram devolvidos.
 
-**Print:** ![Teste 0](prints/teste_00_estado_inicial.png)
+**Print:** ![Teste 0]:
+<img width="883" height="854" alt="{52359A26-4AA5-45D8-A7C0-C40C76566167}" src="https://github.com/user-attachments/assets/9dd050d5-c9c7-4e26-adf8-8800c9fd2768" />
+
 **Saída:** [`saidas/teste_00_estado_inicial.txt`](saidas/teste_00_estado_inicial.txt)
 
 ---
@@ -78,7 +74,9 @@ R0 = 10 − (0+2+3+2+0) = 3, R1 = 5 − (1+0+0+1+0) = 3, R2 = 7 − (0+0+2+1+2) 
 
 **Resultado:** ✅ **REQUISIÇÃO CONCEDIDA**. O estado resultante continua seguro, e a alocação é mantida. Estado após o teste: `A = [2, 3, 0]`, P1 com `C = [3, 0, 2]` e `Need = [0, 2, 0]`.
 
-**Print:** ![Teste 1](prints/teste_01_p1_requisicao_segura.png)
+**Print:** ![Teste 1]:
+<img width="564" height="920" alt="{A74022A6-F057-4FDA-9DFB-10FDC95891D0}" src="https://github.com/user-attachments/assets/07fe6719-0c20-40c9-be89-561b3ef230ce" />
+
 **Saída:** [`saidas/teste_01_p1_requisicao_segura.txt`](saidas/teste_01_p1_requisicao_segura.txt)
 
 ---
@@ -95,7 +93,9 @@ R0 = 10 − (0+2+3+2+0) = 3, R1 = 5 − (1+0+0+1+0) = 3, R2 = 7 − (0+0+2+1+2) 
 
 > **Observação:** o comentário no `main.py` descreve este caso como "requisição INSEGURA". Na execução real, o caso é barrado pela checagem de disponibilidade (passo 2), e não pela verificação de segurança (passo 4). A saída acima reflete o comportamento real do código.
 
-**Print:** ![Teste 2](prints/teste_02_p4_requisicao_bloqueada.png)
+**Print:** ![Teste 2]:
+<img width="519" height="398" alt="{091095AA-DA34-493B-926C-787B9CB31197}" src="https://github.com/user-attachments/assets/e1116333-4d85-47e8-b68c-8f41d892f18f" />
+
 **Saída:** [`saidas/teste_02_p4_requisicao_bloqueada.txt`](saidas/teste_02_p4_requisicao_bloqueada.txt)
 
 ---
@@ -107,7 +107,3 @@ R0 = 10 − (0+2+3+2+0) = 3, R1 = 5 − (1+0+0+1+0) = 3, R2 = 7 − (0+0+2+1+2) 
 | 0 | — (estado inicial) | Estado seguro: P1 → P3 → P0 → P2 → P4 |
 | 1 | P1 pede [1, 0, 2] | Concedida (estado permanece seguro) |
 | 2 | P4 pede [3, 3, 0] | Bloqueada (R0: pede 3, disponível 2) |
-
-## Sobre os prints
-
-Os prints são imagens de terminal geradas pelo `gerar_prints.py` a partir da saída real do `main.py`, com o nome do aluno na barra de título e no prompt. Se o professor exigir capturas de tela do terminal, rode `python3 main.py` no seu computador, tire a captura com seu nome visível (por exemplo, no prompt ou no título da janela) e substitua os arquivos da pasta `prints/`.
